@@ -2,15 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-export const replaceCameWithSpaces = (colorName) => {
+export const replaceCamelWithSpaces = (colorName) => {
   return colorName.replace(/\B([A-Z])\B/g, ' $1')
 }
 
 function App() {
 
-  const [color, setColor] = useState('red')
+  const [color, setColor] = useState('MediumVioletRed')
   const [checked, setChecked] = useState(false)
-  const newColor = color === 'red' ? 'blue' : 'red';
+  const newColor = color === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
+  
   return (
     <div>
       <button
@@ -18,7 +19,7 @@ function App() {
         onClick={() => setColor(newColor)}
         disabled={checked}
       >
-        Change to {newColor}
+        Change to {replaceCamelWithSpaces(newColor)}
       </button>
       <input
         type="checkbox" 
