@@ -22,13 +22,13 @@ describe('disable and change button color', () => {
       backgroundColor: 'MidnightBlue'
     })
     
-    expect(colorButton.textContent).toBe('Change to Medium Violet Red')
+    expect(colorButton).toHaveTextContent('Change to Medium Violet Red')
   
     // click the button again
     fireEvent.click(colorButton)
   
     // button text should be 'Change to blue'
-    expect(colorButton.textContent).toBe('Change to Midnight Blue')
+    expect(colorButton).toHaveTextContent('Change to Midnight Blue')
   
     // test if button is red
     expect(colorButton).toHaveStyle({

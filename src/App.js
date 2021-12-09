@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
@@ -11,7 +10,7 @@ function App() {
   const [color, setColor] = useState('MediumVioletRed')
   const [checked, setChecked] = useState(false)
   const newColor = color === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
-  
+
   return (
     <div>
       <button
@@ -22,7 +21,7 @@ function App() {
         Change to {replaceCamelWithSpaces(newColor)}
       </button>
       <input
-        type="checkbox" 
+        type="checkbox"
         defaultChecked={checked}
         id="change-button-checkbox"
         onChange={() => setChecked(!checked)}
